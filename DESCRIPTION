@@ -1,0 +1,36 @@
+Package: dir
+Title: Cross-Platform Directory Creation and Management Utilities
+Version: 0.1.0
+Authors@R: c(
+    person(c("Juniper", "L."), "Simonis",
+      email = "juniper.simonis@weecology.org", role = c("aut", "cre"),
+      comment = c(ORCID = "0000-0001-9798-0460")),
+    person(c("Glenda", "M."), "Yenni", role = c("aut"), 
+      comment = c(ORCID = "0000-0001-6969-1848")),
+    person("Henry", "Senyondo", role = c("aut"),
+      comment = c(ORCID = "0000-0001-7105-5808")), 
+    person("Hao", "Ye", role = c("aut"),
+      comment = c(ORCID = "0000-0002-8630-1458")),
+	person(c("Ethan", "P."), "White", role = c("aut"),
+      comment = c(ORCID = "0000-0001-6728-7745")),
+    person(c("S.K.", "Morgan"), "Ernest", role = c("aut"),
+      comment = c(ORCID = "0000-0002-6026-8530")))
+Description: Create and manage directories for R analyses projects. This package particularly is designed for supporting automated analyses using minimal dependencies.
+URL: https://github.com/weecology/dir
+BugReports: https://github.com/weecology/dir/issues
+Depends: R (>= 3.2.3)
+License: MIT + file LICENSE
+LazyData: true
+Imports:
+    yaml
+Suggests:
+  knitr,
+  pkgdown,
+  rmarkdown (>= 1.16.1),
+  testthat
+RoxygenNote: 7.1.1
+VignetteBuilder: knitr
+Encoding: UTF-8
+Remotes: 
+    ha0ye/rEDM,
+    rstudio/rmarkdown
