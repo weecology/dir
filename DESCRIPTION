@@ -1,5 +1,5 @@
-Package: dir
-Title: Cross-Platform Directory Creation and Management Utilities
+Package: directree
+Title: Utilities for Directory Trees
 Version: 0.1.0
 Authors@R: c(
     person(c("Juniper", "L."), "Simonis",
@@ -15,14 +15,12 @@ Authors@R: c(
       comment = c(ORCID = "0000-0001-6728-7745")),
     person(c("S.K.", "Morgan"), "Ernest", role = c("aut"),
       comment = c(ORCID = "0000-0002-6026-8530")))
-Description: Create and manage directories for R analyses projects. This package particularly is designed for supporting automated analyses using minimal dependencies.
-URL: https://github.com/weecology/dir
-BugReports: https://github.com/weecology/dir/issues
+Description: Create and manage hierarchical directory trees via scaled-up base R functionality.
+URL: https://github.com/weecology/directree
+BugReports: https://github.com/weecology/directree/issues
 Depends: R (>= 3.2.3)
 License: MIT + file LICENSE
 LazyData: true
-Imports:
-    yaml
 Suggests:
   knitr,
   pkgdown,
@@ -31,6 +29,3 @@ Suggests:
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr
 Encoding: UTF-8
-Remotes: 
-    ha0ye/rEDM,
-    rstudio/rmarkdown

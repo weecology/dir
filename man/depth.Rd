@@ -13,7 +13,7 @@ depth(x)
 \code{integer} value of the depth of the list.
 }
 \description{
-Evaluate an input for the depth of its nesting.
+Measure the depth a list's nesting.
 }
 \details{
 If \code{xlist = list()}, then technically the input value is a 

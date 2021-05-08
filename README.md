@@ -1,2 +1,3 @@
-# dir
-Cross-platform directory creation and management utilities for R
+# directree
+
+Create a directory tree by scaling up single-directory creation.
