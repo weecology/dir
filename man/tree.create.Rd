@@ -5,7 +5,7 @@
 \title{Create a Directory Tree}
 \usage{
 tree.create(
-  ...,
+  tree = list(),
   fsep = .Platform$file.sep,
   winslash = "\\\\",
   mustWork = NA,
@@ -15,8 +15,8 @@ tree.create(
 )
 }
 \arguments{
-\item{...}{\code{character} vectors for file paths. 
-See \code{\link[base]{file.path}}.}
+\item{tree}{\code{list} object describing a directory tree hierarchicaly as
+ingested by \code{\link{tree_paths}}. See \code{Examples}.}
 
 \item{fsep}{Path separator to use (assumed to be ASCII).
 See \code{\link[base]{file.path}}.}
@@ -26,7 +26,12 @@ See \code{\link[base]{normalizePath}}.}
 
 \item{mustWork}{\code{logical}: if \code{TRUE} then an error is given if 
 the result cannot be determined; if \code{NA}, then a warning.
-See \code{\link[base]{normalizePath}}.}
+See \code{\link[base]{normalizePath}}.
+\cr \cr
+\strong{NB:} The default argument is changed to \code{FALSE} compared to
+\code{NA}, given that the folders are being created and so are by 
+default, assumed to not yet exist. The argument is retained, however,
+as it can be useful for avoiding overwriting of existing folders.}
 
 \item{showWarnings}{\code{logical}: should the warnings on failure be 
 shown? 
@@ -34,9 +39,12 @@ See \code{\link[base]{dir.create}}.}
 
 \item{recursive}{\code{logical}: should elements of the path other than 
 the last be created? If \code{TRUE}, like the Unix command 
-\code{mkdir -p}. The default argument is changed to \code{TRUE} compared
-to \code{\link[base]{dir.create}} and \code{\link{dirs.create}}.
-See \code{\link[base]{dir.create}}.}
+\code{mkdir -p}. 
+\cr \cr
+\strong{NB:} The default argument is changed to \code{TRUE} compared
+to \code{\link[base]{dir.create}} and \code{\link{dirs.create}} in order
+to create the full tree. Setting \code{recursive = FALSE} will generate
+a "tree" with only its final (branch tip) folders created.}
 
 \item{mode}{The mode to be used on Unix-alikes: it will be coerced by 
 \code{\link[base]{as.octmode}}. For \code{\link[base]{Sys.chmod}} it 
@@ -51,14 +59,14 @@ See \code{\link[base]{dir.create}}.}
 \description{
 Creates a tree of directories with flexible structure by
  running \code{\link[base]{dirs.create}} over \code{paths} defined
- by the generalized \code{...} inputs, which are processed through
- \code{\link{normalize_file_path}}.
+ by the generalized \code{tree} input list, which is processed through
+ \code{\link{tree_paths}}.
 }
 \examples{
  \dontrun{
 
-   tree.create("root", c("branch1", "branch2"))
+   1
  
- }
+  }
 
 }
